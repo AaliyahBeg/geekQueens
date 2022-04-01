@@ -5,7 +5,6 @@ function App() {
     <>
       <DefaultLayout/>
       
-      <h1>Hello World</h1>
     </>
   );
 }

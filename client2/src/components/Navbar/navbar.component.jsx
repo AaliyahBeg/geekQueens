@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../../assets/Banner.jpg";
+import logo from "../../assets/logo.jpeg";
 
 const NavSm = () => {
     return (
@@ -21,14 +22,25 @@ const NavLg = () => {
         <>
             <div className="relative z-10 w-screen">
                 
-                <img
-                src={banner}
-                alt="Banner"
-                className="w-full h-full"
-                />
-                
+                <div className="h-screen">
+                    <img
+                    src={banner}
+                    alt="Banner"
+                    className="w-full h-full"
+                    />
+                </div>
                 <div className="w-full absolute top-0 left-0 bg-black opacity-80">
-                    <h1 className="text-3xl text-white m-4">Hello World</h1>
+                    <div className="flex items-center">
+                        <div className="w-10 h-10 m-3">
+                            <img
+                            src={logo}
+                            alt="Logo"
+                            className="w-full h-full"
+                            />
+                        </div>
+                        
+                        <h1 className="text-3xl text-white m-4">Wild Canopy</h1>
+                    </div>
                 </div>
             </div>
         </>
