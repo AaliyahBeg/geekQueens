@@ -1,7 +1,7 @@
 import React from "react";
-import banner from "../../assets/Banner.jpg";
-import logo from "../../assets/logo.jpeg";
-
+import banner from "../../assets/Banner2.jpg";
+import logo from "../../assets/logo.png";
+import Menu from "./Menu"
 const NavSm = () => {
     return (
         <>
@@ -26,21 +26,27 @@ const NavLg = () => {
                     <img
                     src={banner}
                     alt="Banner"
-                    className="w-full h-full"
+                    className="w-full h-3/4 shadow-lg shadow-[#2a2f1b]"
                     />
                 </div>
-                <div className="w-full absolute top-0 left-0 bg-black opacity-80">
+                <div className="w-full absolute top-0 left-0 bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
                     <div className="flex items-center">
-                        <div className="w-10 h-10 m-3">
-                            <img
-                            src={logo}
-                            alt="Logo"
-                            className="w-full h-full"
-                            />
+                        <div className="w-3/4 flex items-center">
+                            <div className="w-10 h-10 m-3">
+                                <img
+                                src={logo}
+                                alt="Logo"
+                                className="w-full h-full"
+                                />
+                            </div>
+                            
+                            <h1 className="text-3xl text-white m-4 comfortaa">Wild Canopy</h1>
                         </div>
-                        
-                        <h1 className="text-3xl text-white m-4">Wild Canopy</h1>
+                        <div className="w-1/4">
+                            <Menu/>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </>
