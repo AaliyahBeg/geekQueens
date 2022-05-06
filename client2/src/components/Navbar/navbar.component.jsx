@@ -29,23 +29,26 @@ const NavLg = () => {
                     className="w-full h-3/4 shadow-lg shadow-[#2a2f1b]"
                     />
                 </div>
-                <div className="w-full absolute top-0 left-0 bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
-                    <div className="flex items-center">
-                        <div className="w-3/4 flex items-center">
-                            <div className="w-10 h-10 m-3">
-                                <img
-                                src={logo}
-                                alt="Logo"
-                                className="w-full h-full"
-                                />
-                            </div>
-                            
-                            <h1 className="text-3xl text-white m-4 comfortaa">Wild Canopy</h1>
+                <div className="flex items-center w-screen absolute top-0 left-0 bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
+                    
+                    <div className="w-3/4 flex items-center">
+                        <div className="w-10 h-10 m-3">
+                            <img
+                            src={logo}
+                            alt="Logo"
+                            className="w-full h-full"
+                            />
                         </div>
-                        <div className="w-1/4">
-                            <Menu/>
-                        </div>
+                        
+                        <h1 className="text-3xl text-white m-4 comfortaa">Wild Canopy</h1>
                     </div>
+
+                    <div className="flex items-center w-1/4 gap-5">
+                            <a href="\#" className="text-md text-white">About Us</a>
+                            <a href="\#" className="text-md text-white">Petitions</a>
+                            <Menu/>
+                    </div>
+                    
 
                 </div>
             </div>

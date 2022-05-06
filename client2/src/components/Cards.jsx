@@ -30,7 +30,6 @@ const Cards = () => {
   return (
     <div>
         <div className="flex justify-items-center gap-6 m-6">
-        {/* <div className="flex items-center gap-6 m-6"> */}
             {images.map((image) => (
                 <div className="">
                     <SingleCard 
@@ -41,28 +40,6 @@ const Cards = () => {
                     />
                 </div>
             ))}
-            
-        
-        {/* </div> */}
-
-            {/* <div className="">
-               <SingleCard/>
-            </div>
-
-            <div className="">
-                <SingleCard/>
-            </div>
-
-            <div className="">
-                <SingleCard/>
-            </div>
-
-            <div className="">
-                <SingleCard/>
-            </div>
-            <div>
-                
-            </div> */}
         </div>
     </div>
   )
