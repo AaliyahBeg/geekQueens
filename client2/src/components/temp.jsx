@@ -7,45 +7,31 @@ const temp = (prop) => {
     <div className={prop.p_class}>
         <div class={`wrapper antialiased text-gray-900`}>
             <div>
-                    
-                <img 
-                src={prop.src} 
-                alt="animal" 
-                class={`object-cover object-center rounded-lg ${prop.classes}`}/>    
-                                
+                <div className={prop.p2_class}>    
+                    <img 
+                    src={prop.src} 
+                    alt="animal" 
+                    class={`centered py-10 object-cover object-center ${prop.classes}`}/>    
+                </div>              
                 <div class="relative px-4 -mt-16  ">
                     <div class="bg-white p-6 rounded-lg">
-                        <div class="flex items-baseline">
+                        <div class="flex items-baseline mb-3">
                             <span 
                             class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full 
                             uppercase font-semibold tracking-wide">
-                                Fact
+                                {prop.tag}
                             </span>
-                            <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+                            {/* <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
                             Endangered  &bull; Wildlife
-                            </div>  
+                            </div>   */}
                         </div>
                     
-                        <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+                        <h4 class="mt-1 text-lg font-semibold uppercase leading-tight truncate whitespace-pre">
                             {prop.title}
                         </h4>
 
-                        <div class="mt-1 text-sm font-semibold leading-tight truncate">
-                            <h1>They're the world's largest land animal.</h1>
-
-                            <h1>You can tell the two species apart by their ears</h1>
-
-                            <h1>Their trunks have mad skills</h1>
-
-                            <h1>Their tusks are actually teeth</h1>
-
-                            <h1>They've got thick skin</h1>
-
-                            <h1>Elephants are constantly eating</h1>
-
-                            <h1>They communicate through vibrations</h1>
-
-                            <h1>Calves can stand within 20 minutes of birth.</h1>
+                        <div class="mt-1 text-xs font-semibold leading-tight truncate whitespace-pre">
+                            {prop.text}
                         </div>
 
                         <div class="mt-4">

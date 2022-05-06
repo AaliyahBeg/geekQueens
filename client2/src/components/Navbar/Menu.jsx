@@ -1,7 +1,6 @@
 import React from "react"
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
-import {BiChevronDown} from 'react-icons/bi'
+import { Fragment } from 'react'
 import {CgProfile} from 'react-icons/cg'
 import {FaSignInAlt} from 'react-icons/fa'
 import {MdSwitchAccount} from 'react-icons/md'
@@ -27,6 +26,7 @@ export default function Example() {
         >
           <Menu.Items className="absolute right-0 mt-2 w-56 origin-center divide-y divide-gray-100 rounded-md bg-white">
             <div className="px-1 py-1">
+              
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -39,6 +39,7 @@ export default function Example() {
                   </button>
                 )}
               </Menu.Item>
+
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -51,8 +52,11 @@ export default function Example() {
                   </button>
                 )}
               </Menu.Item>
+
             </div>
+
             <div className="px-1 py-1">
+              
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -65,6 +69,7 @@ export default function Example() {
                   </button>
                 )}
               </Menu.Item>
+              
             </div>
           </Menu.Items>
         </Transition>
