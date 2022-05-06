@@ -4,7 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Tapestry&display=swap');
 
 .leafy{
-    background-color: rgb(3, 63, 3);
+    background-color: #033f03;
+}
+
+.light_leafy{
+    background-color: #b5f1b5;
 }
 
 .tapestry{
@@ -19,4 +23,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+}
+
+.wrapper{
+display:grid;
+height:100vh;
+place-items:center
+}
