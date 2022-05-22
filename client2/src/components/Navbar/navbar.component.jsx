@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import banner from "../../assets/Banner2.jpg";
+import banner from "../../assets/Banner.png";
 import logo from "../../assets/logo.png";
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
