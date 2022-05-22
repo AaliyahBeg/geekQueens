@@ -41,7 +41,7 @@ img_classes: "w-1/2 h-1/2",
 p_class: "lg:max-w-lg lg:min-h-lg centered",
 p2_class: "",
 text:  
-`Any act commited against the rights
+`Any act committed against the rights
 of animals can be raised on this
 platform in the form of petitions.
 Let us all help the innocents raise

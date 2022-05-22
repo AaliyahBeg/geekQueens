@@ -58,7 +58,7 @@ const NavSmMd = () => {
                             <a href="\#" className="block text-3xl text-white centered pt-4">Help</a>
                             <a href="\#" className="block text-3xl text-white centered pt-4">About Us</a>
                             <a href="\#" className="block text-3xl text-white centered pt-4">Sign In</a>
-                            <a href="\#" className="block text-3xl text-white centered pt-4">Sign Out</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Sign Up</a>
                         </div>
                         
                     </div> 
