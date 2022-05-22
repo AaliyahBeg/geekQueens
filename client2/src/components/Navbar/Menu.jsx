@@ -6,7 +6,7 @@ import {FaSignInAlt} from 'react-icons/fa'
 import {MdSwitchAccount} from 'react-icons/md'
 import {IoIosHelpCircleOutline} from 'react-icons/io'
 
-export default function Example() {
+export default function Example(props) {
   return (
     <div className="top-16 text-right ml-6">
       <Menu as="div" className="relative inline-block text-left">
@@ -25,30 +25,35 @@ export default function Example() {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute right-0 mt-2 w-56 origin-center divide-y divide-gray-100 rounded-md bg-white">
-            <div className="px-1 py-1">
+            
               
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-leaf text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm gap-3`}
-                  >
-                    <FaSignInAlt className="text-md"/>
-                    Sign In
-                  </button>
-                )}
-              </Menu.Item>
+              {props.items.map((item) => {
+                <div className="px-1 py-1">
+                  <Menu.Item>
+                  {({ active }) => (
+                    <button
+                      className={`${
+                        active ? 'bg-leaf text-white' : `text-gray-900 ${item.class}`
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm gap-3`}
+                    >
+                      <FaSignInAlt className="text-md"/>
+                      {item.title}
+                    </button>
+                  )}
+                </Menu.Item>
+                </div>
+              })}
+              
 
-              <Menu.Item>
+              {/* <Menu.Item>
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? 'bg-leaf text-white' : 'text-gray-900'
+                      active ? 'bg-leaf text-white' : `text-gray-900 ${props.class[1]}`
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm gap-3`}
                   >
                     <MdSwitchAccount className="text-md"/>
-                    Sign Up
+                    {props.item[1]}
                   </button>
                 )}
               </Menu.Item>
@@ -61,16 +66,16 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? 'bg-leaf text-white' : 'text-gray-900'
+                      active ? 'bg-leaf text-white' : `text-gray-900 ${props.class[2]}`
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm gap-3`}
                   >
                     <IoIosHelpCircleOutline className="text-md"/>
-                    Help
+                    {props.item[2]}
                   </button>
                 )}
               </Menu.Item>
               
-            </div>
+            </div> */}
           </Menu.Items>
         </Transition>
       </Menu>

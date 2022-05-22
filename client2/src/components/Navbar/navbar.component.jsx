@@ -5,14 +5,97 @@ import Menu from "./Menu"
 const NavSm = () => {
     return (
         <>
-            
+            <div clasName="w-full">
+                <div className="flex items-center w-full bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
+                    
+                    <div className="">
+                        <div className="w-10 h-10 ml-3 my-3">
+                            <img
+                            src={logo}
+                            alt="Logo"
+                            className="w-full h-full"
+                            />
+                        </div>
+                        
+                        <h1 className="text-3xl text-white m-4">Wild Canopy</h1>
+                        
+                    </div>
+
+                    {/* <div className="flex items-center justify-end mx-10 w-1/6 gap-5">
+                        
+                         <Menu items={items}/> 
+                    </div> */}
+                    
+
+                </div>
+                
+            </div>
         </>
     )
 }
 
 const NavMd = () => {
+    const items = [
+        {
+            title: "Home",
+            class: ""
+        },
+        {   
+            title: "Track Flora",
+            class: ""
+        },
+        {    
+            title: "Track Fauna",
+            class: ""
+        },
+        {
+            title:"Petitions",
+            class: ""
+        },
+        {
+            title:"Help",
+            class: ""
+        },
+        {    
+            title: "About Us",
+            class: ""
+        },
+        {    
+            title: "Sign In",
+            class: ""
+        },
+        {    
+            title: "Sign Up",
+            class: ""
+        }
+    ]
+
     return(
         <>
+                <div className="flex items-center w-screen bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
+                    
+                    <div className="flex items-center w-5/6">
+                        <div className="w-10 h-10 ml-3 my-3">
+                            <img
+                            src={logo}
+                            alt="Logo"
+                            className="w-full h-full"
+                            />
+                        </div>
+                        
+                        <h1 className="text-3xl text-white m-4">Wild Canopy</h1>
+                        
+                    </div>
+
+                    <div className="flex items-center justify-end mx-10 w-1/6 gap-5">
+                        
+                         <Menu items={items}/> 
+                    </div>
+                    
+
+                </div>
+                
+            
         </>
     );
 }
@@ -66,7 +149,7 @@ const Navbar = () => {
     return (
         <>
             <nav>
-                <div className="md:hidden">
+                <div className="sm:flex md:hidden">
                     {/*Mobile Screen*/}
                     <NavSm />
                 </div>
