@@ -1,15 +1,15 @@
 import React from 'react'
 import sdg from '../assets/SDG-15.png'
 import globe from '../assets/globe.png'
-import SingleCard from './temp'
-
+import CardsLg from './CardsLg'
+import CardsSm from './CardsSm'
 
 const Cards = () => {
     const images = [
 {
 name: sdg,
 title: "Life on Land",
-img_classes: "lg:w-1/2 lg:h-1/2",
+img_classes: "rounded-lg w-1/2 h-1/2",
 p_class: "lg:max-w-lg lg:min-h-lg",
 p2_class: "rounded-lg",
 text: 
@@ -23,7 +23,7 @@ tag: "SDG-15",
 name: globe,
 title: `Mapping Worst Affected 
 Areas`,
-img_classes: "lg:w-1/2 lg:h-1/2",
+img_classes: "w-1/2 h-1/2",
 p_class: "lg:max-w-lg lg:min-h-lg",
 p2_class: "",
 text: 
@@ -55,7 +55,7 @@ tag: "raise petitions",
         <div className="hidden lg:flex items-center justify-evenly gap-6 mx-6">
             {images.map((image) => (
                 <div className="">
-                    <SingleCard 
+                    <CardsLg 
                     src={image.name} 
                     classes={image.img_classes} 
                     title={image.title}
@@ -70,7 +70,7 @@ tag: "raise petitions",
         <div className="lg:hidden mx-6">
             {images.map((image) => (
                 <div className="">
-                    <SingleCard 
+                    <CardsSm 
                     src={image.name} 
                     classes={image.img_classes} 
                     title={image.title}

@@ -1,100 +1,71 @@
-import React from "react";
+import React,{useState} from "react";
 import banner from "../../assets/Banner2.jpg";
 import logo from "../../assets/logo.png";
-import Menu from "./Menu"
-const NavSm = () => {
-    return (
-        <>
-            <div clasName="w-full">
-                <div className="flex items-center w-full bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+
+const NavSmMd = () => {
+
+    const [icon,setIcon]=useState(true);
+    const iconChange=icon?<div className="p-4 flex items-center w-screen bg-black shadow-lg shadow-[#2a2f1b]">
                     
-                    <div className="">
-                        <div className="w-10 h-10 ml-3 my-3">
-                            <img
-                            src={logo}
-                            alt="Logo"
-                            className="w-full h-full"
-                            />
+                        <div className="flex items-center w-5/6">
+                            <div className="w-20 h-20 ml-3 my-3">
+                                <img
+                                src={logo}
+                                alt="Logo"
+                                className="w-full h-full"
+                                />
+                            </div>
+                            
+                            <h1 className="text-5xl text-white mx-6">Wild Canopy</h1>
+                            
+                        </div>
+
+                        <button onClick={()=>{setIcon(!icon)}} className="flex items-center justify-end mx-10 w-1/6 gap-5">
+                            <AiOutlineMenu className="text-sandy text-5xl"/>
+                        </button>
+    
+
+                    </div> 
+                    :
+                    <div className="py-4 flex flex-col">
+                        <div className="flex items-center w-screen bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
+                        
+                            <div className="flex items-center w-5/6">
+                                <div className="w-20 h-20 ml-3 my-3">
+                                    <img
+                                    src={logo}
+                                    alt="Logo"
+                                    className="w-full h-full"
+                                    />
+                                </div>
+                                
+                                <h1 className="text-5xl text-white m-4">Wild Canopy</h1>
+                                
+                            </div>
+
+                            <button onClick={()=>{setIcon(!icon)}} className="flex items-center justify-end mx-10 w-1/6 gap-5">
+                                <AiOutlineClose className="text-sandy text-5xl"/>
+                            </button>
+        
+
+                        </div>
+                        <div className="flex flex-col bg-black py-4">
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Home</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Track Flora</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Track Fauna</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Petitions</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Help</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">About Us</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Sign In</a>
+                            <a href="\#" className="block text-3xl text-white centered pt-4">Sign Out</a>
                         </div>
                         
-                        <h1 className="text-3xl text-white m-4">Wild Canopy</h1>
-                        
-                    </div>
-
-                    {/* <div className="flex items-center justify-end mx-10 w-1/6 gap-5">
-                        
-                         <Menu items={items}/> 
-                    </div> */}
-                    
-
-                </div>
-                
-            </div>
-        </>
-    )
-}
-
-const NavMd = () => {
-    const items = [
-        {
-            title: "Home",
-            class: ""
-        },
-        {   
-            title: "Track Flora",
-            class: ""
-        },
-        {    
-            title: "Track Fauna",
-            class: ""
-        },
-        {
-            title:"Petitions",
-            class: ""
-        },
-        {
-            title:"Help",
-            class: ""
-        },
-        {    
-            title: "About Us",
-            class: ""
-        },
-        {    
-            title: "Sign In",
-            class: ""
-        },
-        {    
-            title: "Sign Up",
-            class: ""
-        }
-    ]
-
+                    </div> 
     return(
         <>
-                <div className="flex items-center w-screen bg-black opacity-80 shadow-lg shadow-[#2a2f1b]">
-                    
-                    <div className="flex items-center w-5/6">
-                        <div className="w-10 h-10 ml-3 my-3">
-                            <img
-                            src={logo}
-                            alt="Logo"
-                            className="w-full h-full"
-                            />
-                        </div>
-                        
-                        <h1 className="text-3xl text-white m-4">Wild Canopy</h1>
-                        
-                    </div>
-
-                    <div className="flex items-center justify-end mx-10 w-1/6 gap-5">
-                        
-                         <Menu items={items}/> 
-                    </div>
-                    
-
-                </div>
                 
+                {iconChange}
             
         </>
     );
@@ -149,13 +120,9 @@ const Navbar = () => {
     return (
         <>
             <nav>
-                <div className="sm:flex md:hidden">
-                    {/*Mobile Screen*/}
-                    <NavSm />
-                </div>
-                <div className="hidden md:flex lg:hidden">
-                    {/*Tablet Screen*/}
-                    <NavMd />
+                <div className="flex lg:hidden">
+                    {/*Mobile and Tablet Screen*/}
+                    <NavSmMd />
                 </div>
                 <div className="hidden lg:flex">
                     {/*Laptop/TV Screen*/}
